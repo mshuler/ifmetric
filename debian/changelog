@@ -1,0 +1,25 @@
+ifmetric (0.3-2) unstable; urgency=low
+
+  * debian/control: bump standards-version (no changes).
+  * debian/copyright: update FSF address.
+
+ -- Chris Hanson <cph@debian.org>  Tue, 17 Jan 2006 01:02:42 -0500
+
+ifmetric (0.3-1) unstable; urgency=low
+
+  * New upstream version.
+  * Add ifup script implementing "metric" keyword.  (closes: Bug#224396)
+
+ -- Chris Hanson <cph@debian.org>  Mon, 5 Apr 2004 23:08:00 -0400
+
+ifmetric (0.2b-2) unstable; urgency=low
+
+  * Add build-dependency on lynx.  (closes: Bug#219689)
+
+ -- Chris Hanson <cph@debian.org>  Sun, 9 Nov 2003 00:24:15 -0500
+
+ifmetric (0.2b-1) unstable; urgency=low
+
+  * Initial packaging.  (closes: Bug#205448)
+
+ -- Chris Hanson <cph@debian.org>  Tue, 28 Oct 2003 00:01:21 -0500
