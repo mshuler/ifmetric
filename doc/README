@@ -1,0 +1,151 @@
+
+                                 ifmetric 0.3
+
+   Copyright 2003,2004 Lennart Poettering <mzvszrgevp (at) 0pointer (dot)
+   de>
+     * [1]License
+     * [2]News
+     * [3]Overview
+     * [4]Status
+     * [5]Documentation
+     * [6]Requirements
+     * [7]Installation
+     * [8]Acknowledgements
+     * [9]Download
+
+License
+
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or (at
+   your option) any later version.
+
+   This program is distributed in the hope that it will be useful, but
+   WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+   General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
+News
+
+   Sat Jan 24 2004:
+
+   [10]Version 0.3 release; fix compatibility with Linux 2.6
+
+   Sat Aug 23 2003:
+
+   [11]Version 0.2b release; URL fix
+
+   Sat Aug 23 2003:
+
+   [12]Version 0.2 released; changes include updated documentation, build
+   system, contact information
+
+   Mon Aug 4 2003:
+
+   [13]Version 0.1 released
+
+Overview
+
+   ifmetric is a Linux tool for setting the metrics of all IPv4 routes
+   attached to a given network interface at once. This may be used to
+   change the priority of routing IPv4 traffic over the interface. Lower
+   metrics correlate with higher priorities.
+
+Status
+
+   Version 0.3 is stable and feature complete.
+
+Documentation
+
+  ifmetric's purpose
+
+   Sometimes two network interfaces of different speeds with equal routes
+   are available at the same time. (e.g. a laptop with both a wireless
+   and a copper LAN card) The one with the greater througput should be
+   preferred over the other. To achieve this, you may use the route's
+   metric field. Routes with lower metrics are preferred over those with
+   higher. Unfortunately many network configurators (like DHCP clients)
+   do not support to set the metric for a route. ifmetric may be used to
+   manipulate the metrics of routes a posteriori. The default metric for
+   a route in the Linux kernel is 0, meaning the highest priority.
+
+   ifmetric makes use of the NETLINK interface of the Linux kernel for
+   manipulating the routes. Thus, ifmetric is compatible with complex
+   routes created with iproute2.
+
+   ifmetric doesn't modify the routes atomically. The is due to the
+   NETLINK API. However, this should not hurt since ifmetric makes sure
+   that not routes are ever lost while modifying them.
+
+  Usage
+
+   Have a look on the manual page [14]ifmetric(8).
+
+   To give all other interfaces a higher priority than wlan0 simply run:
+ifmetric wlan0 1
+
+   To reset the metrics of the routes attached to wlan0 simply run:
+ifmetric wlan0 0
+
+Requirements
+
+   A newer Linux Kernel supporting the NETLINK API. (I think 2.2 is good
+   enough).
+
+   ifmetric was developed and tested on Debian GNU/Linux "testing" from
+   August 2003, it should work on most other Linux distributions since it
+   uses GNU autoconf for source code configuration.
+
+Installation
+
+   As this package is made with the GNU autotools you should run
+   ./configure inside the distribution directory for configuring the
+   source tree. After that you should run make for compilation and make
+   install (as root) for installation of ifmetric.
+
+   The Linux kernel headers have to be available during compilation.
+
+Acknowledgements
+
+   For the developers of iproute2 and zebra, since I looked on their
+   source codes for learning how to use NETLINK.
+
+Download
+
+   The newest release is always available from
+   [15]http://0pointer.de/lennart/projects/ifmetric/
+
+   The current release is [16]0.3
+
+   If you want to be notified whenever I release a new version of this
+   software use the subscription feature of [17]Freshmeat.
+     _________________________________________________________________
+
+
+    Lennart Poettering <mzvszrgevp (at) 0pointer (dot) de>, January 2004
+
+   $Id: README.html.in 16 2004-01-23 23:20:25Z lennart $
+
+References
+
+   1. README#license
+   2. README#news
+   3. README#overview
+   4. README#status
+   5. README#documentation
+   6. README#requirements
+   7. README#installation
+   8. README#acks
+   9. README#download
+  10. http://0pointer.de/lennart/projects/ifmetric/ifmetric-0.3.tar.gz
+  11. http://0pointer.de/lennart/projects/ifmetric/ifmetric-0.2b.tar.gz
+  12. http://0pointer.de/lennart/projects/ifmetric/ifmetric-0.2.tar.gz
+  13. http://0pointer.de/lennart/projects/ifmetric/ifmetric-0.1.tar.gz
+  14. http://0pointer.de/lennart/projects/ifmetric/ifmetric.8.xml
+  15. http://0pointer.de/lennart/projects/ifmetric/
+  16. http://0pointer.de/lennart/projects/ifmetric/ifmetric-0.3.tar.gz
+  17. http://freshmeat.net/projects/ifmetric/

@@ -1,0 +1,70 @@
+<?xml version="1.0" standalone='no'?> <!--*-nxml-*-->
+<!DOCTYPE manpage SYSTEM "xmltoman.dtd">
+<?xml-stylesheet type="text/xsl" href="xmltoman.xsl" ?>
+
+<!-- $Id: ifmetric.8.xml.in 16 2004-01-23 23:20:25Z lennart $ -->
+
+<!-- 
+  This file is part of ifmetric.
+
+  ifmetric is free software; you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free
+  Software Foundation; either version 2 of the License, or (at your
+  option) any later version.
+
+  ifmetric is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+  FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
+  for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with ifmetric; if not, write to the Free Software Foundation,
+  Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA. 
+-->
+
+  <manpage name="ifmetric" section="8" desc="An IPv4 route metrics manipulation tool">
+
+	<synopsis>
+	  <cmd>ifmetric <arg>INTERFACE</arg> [<arg>METRIC</arg>]</cmd>
+	</synopsis>
+	
+	<description> <p>ifmetric is a Linux tool for setting the metrics of all
+	  IPv4 routes attached to a given network interface at once. This
+	  may be used to change the priority of routing IPv4 traffic over
+	  the interface. Lower metrics correlate with higher
+	  priorities.</p>
+
+      <p>ifmetric uses the Linux NETLINK interface to manipulate the
+     routes. Because of that it is compatible with routes created with
+     the new iproute2 utility.</p>
+    </description>
+	
+	<options>
+
+	  <p>You should specify the interface name as first parameter. The
+	  second parameter should be the new metric. If ommited the metric
+	  0 (highest) is used.</p>
+	  
+	</options>
+	
+	<section name="Return values">
+	  <p><arg>0</arg> Success</p>
+	  <p><arg>1</arg> Failure</p>
+	</section>
+	
+	<section name="Author">
+	  <p>ifmetric was written by Lennart Poettering &lt;@PACKAGE_BUGREPORT@&gt;.  ifmetric is available at <url href="@PACKAGE_URL@"/></p>
+	</section>
+	
+	<section name="See also">
+	  <p>
+		<manref name="route" section="8"/>, <manref name="ip" section="8"/> (iproute2)
+	  </p>
+	</section>
+	
+	<section name="Comments">
+	  <p>This man page was written using <manref name="xml2man" section="1"
+		  href="http://masqmail.cx/xml2man/"/> by Oliver Kurth.</p>
+	</section>
+	
+  </manpage>

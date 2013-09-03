@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="iso-8895-15"?> <!-- -*-html-helper-*- -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>ifmetric 0.3</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+<h1><a name="top">ifmetric 0.3</a></h1>
+
+<p><i>Copyright 2003,2004 Lennart Poettering &lt;mzvszrgevp (at) 0pointer (dot) de&gt;</i></p>
+
+<ul class="toc">
+    <li><a href="#license">License</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#status">Status</a></li>
+    <li><a href="#documentation">Documentation</a></li>
+    <li><a href="#requirements">Requirements</a></li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#acks">Acknowledgements</a></li>
+    <li><a href="#download">Download</a></li>
+</ul>
+
+<h2><a name="license">License</a></h2>
+
+<p>This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License as
+published by the Free Software Foundation; either version 2 of the
+License, or (at your option) any later version.</p>
+
+<p>This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.</p>
+
+<p>You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.</p>
+
+<h2><a name="news">News</a></h2>
+
+<div class="news-date">Sat Jan 24 2004: </div> <p class="news-text"><a
+href="http://0pointer.de/lennart/projects/ifmetric/ifmetric-0.3.tar.gz">Version
+0.3</a> release; fix compatibility with Linux 2.6</p>
+
+<div class="news-date">Sat Aug 23 2003: </div> <p class="news-text"><a
+href="http://0pointer.de/lennart/projects/ifmetric/ifmetric-0.2b.tar.gz">Version
+0.2b</a> release; URL fix</p>
+
+<div class="news-date">Sat Aug 23 2003: </div> <p class="news-text"><a
+href="http://0pointer.de/lennart/projects/ifmetric/ifmetric-0.2.tar.gz">Version
+0.2</a> released; changes include updated documentation, build system, contact information</p>
+
+<div class="news-date">Mon Aug 4 2003: </div> <p class="news-text"><a
+href="http://0pointer.de/lennart/projects/ifmetric/ifmetric-0.1.tar.gz">Version
+0.1</a> released</p>
+
+<h2><a name="overview">Overview</a></h2>
+
+<p><tt>ifmetric</tt> is a Linux tool for setting the metrics of all
+IPv4 routes attached to a given network interface at once. This
+may be used to change the priority of routing IPv4 traffic over
+the interface. Lower metrics correlate with higher
+priorities.</p>
+  
+<h2><a name="status">Status</a></h2>
+
+<p>Version 0.3 is stable and feature complete.</p>
+  
+<h2><a name="documentation">Documentation</a></h2>
+
+<h3><tt>ifmetric</tt>'s purpose</h3>
+
+<p>Sometimes two network interfaces of different speeds with equal
+routes are available at the same time. (e.g. a laptop with both a
+wireless and a copper LAN card) The one with the greater througput
+should be preferred over the other. To achieve this, you may use the
+route's metric field. Routes with lower metrics are preferred over
+those with higher. Unfortunately many network configurators (like DHCP
+clients) do not support to set the metric for a
+route. <tt>ifmetric</tt> may be used to manipulate the metrics of
+routes a posteriori. The default metric for a route in the Linux
+kernel is 0, meaning the highest priority.</p>
+
+<p><tt>ifmetric</tt> makes use of the NETLINK interface of the Linux
+kernel for manipulating the routes. Thus, <tt>ifmetric</tt> is
+compatible with complex routes created with <tt>iproute2</tt>.</p>
+
+<p><tt>ifmetric</tt> doesn't modify the routes atomically. The is due
+to the NETLINK API. However, this should not hurt since
+<tt>ifmetric</tt> makes sure that not routes are ever lost while
+modifying them.</p>
+
+<h3>Usage</h3>
+
+<p>Have a look on the manual page <a href="http://0pointer.de/lennart/projects/ifmetric/ifmetric.8.xml"><tt>ifmetric(8)</tt></a>.
+
+<p>To give all other interfaces a higher priority than <tt>wlan0</tt> simply run:</p>
+
+<pre>ifmetric wlan0 1</pre>
+
+<p>To reset the metrics of the routes attached to <tt>wlan0</tt> simply run:</p>
+
+<pre>ifmetric wlan0 0</pre>
+
+<h2><a name="requirements">Requirements</a></h2>
+
+<p>A newer Linux Kernel supporting the NETLINK API. (I think 2.2 is
+good enough).</p>
+
+<p><tt>ifmetric</tt> was developed and tested on Debian GNU/Linux
+"testing" from August 2003, it should work on most other Linux
+distributions since it uses GNU autoconf for
+source code configuration.</p>
+
+<h2><a name="installation">Installation</a></h2>
+
+<p>As this package is made with the GNU autotools you should run
+<tt>./configure</tt> inside the distribution directory for configuring
+the source tree. After that you should run <tt>make</tt> for
+compilation and <tt>make install</tt> (as root) for installation of
+<tt>ifmetric</tt>.</p>
+
+<p>The Linux kernel headers have to be available during compilation.</p>
+
+<h2><a name="acks">Acknowledgements</a></h2>
+
+<p>For the developers of <tt>iproute2</tt> and <tt>zebra</tt>, since I looked
+on their source codes for learning how to use NETLINK.</p>
+
+<h2><a name="download">Download</a></h2>
+
+<p>The newest release is always available from <a href="http://0pointer.de/lennart/projects/ifmetric/">http://0pointer.de/lennart/projects/ifmetric/</a></p>
+
+<p>The current release is <a href="http://0pointer.de/lennart/projects/ifmetric/ifmetric-0.3.tar.gz">0.3</a></p>
+
+<p>If you want to be notified whenever I release a new version of this software use the subscription feature of <a href="http://freshmeat.net/projects/ifmetric/">Freshmeat</a>.</p>
+
+<hr/>
+
+<address class="grey">Lennart Poettering &lt;mzvszrgevp (at) 0pointer (dot) de&gt;, January 2004</address>
+
+<div class="grey"><i>$Id: README.html.in 16 2004-01-23 23:20:25Z lennart $</i></div>
+
+</body>
+</html>

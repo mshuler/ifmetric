@@ -1,0 +1,22 @@
+.TH ifmetric 8 User Manuals
+.SH NAME
+ifmetric \- An IPv4 route metrics manipulation tool
+.SH SYNOPSIS
+\fBifmetric \fIINTERFACE\fB [\fIMETRIC\fB]
+\f1
+.SH DESCRIPTION
+ifmetric is a Linux tool for setting the metrics of all IPv4 routes attached to a given network interface at once. This may be used to change the priority of routing IPv4 traffic over the interface. Lower metrics correlate with higher priorities.
+
+ifmetric uses the Linux NETLINK interface to manipulate the routes. Because of that it is compatible with routes created with the new iproute2 utility.
+.SH OPTIONS
+You should specify the interface name as first parameter. The second parameter should be the new metric. If ommited the metric 0 (highest) is used.
+.SH RETURN VALUES
+\fI0\f1 Success
+
+\fI1\f1 Failure
+.SH AUTHOR
+ifmetric was written by Lennart Poettering <mzvszrgevp (at) 0pointer (dot) de>. ifmetric is available at \fBhttp://0pointer.de/lennart/projects/ifmetric/\f1
+.SH SEE ALSO
+\fBroute(8)\f1, \fBip(8)\f1 (iproute2) 
+.SH COMMENTS
+This man page was written using \fBxml2man(1)\f1 by Oliver Kurth.
