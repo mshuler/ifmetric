@@ -14,6 +14,7 @@ ifmetric (0.3-3) UNRELEASED; urgency=low
     TODO:
   * Add patch to fix NETLINK: Packet too small or truncated!  Closes: #514197
   * Update debian/copyright to machine readable format.
+  * I: ifmetric: spelling-error-in-binary usr/sbin/ifmetric Recieved Received
 
  -- Michael Shuler <michael@pbandjelly.org>  Tue, 03 Sep 2013 21:24:50 -0500
 
