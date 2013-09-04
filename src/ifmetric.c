@@ -38,7 +38,7 @@ int enumerate_callback(struct nlmsghdr *n, void *u) {
             case RTA_OIF:
 
                 if (RTA_PAYLOAD(a) != sizeof(int)) {
-                    fprintf(stderr, "NETLINK: Recieved corrupt RTA_OIF payload.\n");
+                    fprintf(stderr, "NETLINK: Received corrupt RTA_OIF payload.\n");
                     return -1;
                 }
                 
@@ -102,7 +102,7 @@ struct nlmsghdr* set_route_metric(struct nlmsghdr* n, int metric) {
             case RTA_PRIORITY:
 
                 if (RTA_PAYLOAD(a) != sizeof(int)) {
-                    fprintf(stderr, "NETLINK: Recieved corrupt RTA_PRIORITY payload.\n");
+                    fprintf(stderr, "NETLINK: Received corrupt RTA_PRIORITY payload.\n");
                     return NULL;
                 }
 
