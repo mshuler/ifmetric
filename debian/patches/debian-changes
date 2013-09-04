@@ -1,0 +1,30 @@
+Subject: Collected Debian patches for ifmetric
+Author: Michael Shuler <michael@pbandjelly.org>
+
+The ifmetric package is maintained in Git rather than maintaining
+patches as separate files, and separating the patches doesn't seem to
+be worth the effort.  They are therefore all included in this single
+Debian patch.
+
+For full commit history and separated commits, see the packaging Git
+repository.
+--- ifmetric-0.3.orig/src/ifmetric.c
++++ ifmetric-0.3/src/ifmetric.c
+@@ -38,7 +38,7 @@ int enumerate_callback(struct nlmsghdr *
+             case RTA_OIF:
+ 
+                 if (RTA_PAYLOAD(a) != sizeof(int)) {
+-                    fprintf(stderr, "NETLINK: Recieved corrupt RTA_OIF payload.\n");
++                    fprintf(stderr, "NETLINK: Received corrupt RTA_OIF payload.\n");
+                     return -1;
+                 }
+                 
+@@ -102,7 +102,7 @@ struct nlmsghdr* set_route_metric(struct
+             case RTA_PRIORITY:
+ 
+                 if (RTA_PAYLOAD(a) != sizeof(int)) {
+-                    fprintf(stderr, "NETLINK: Recieved corrupt RTA_PRIORITY payload.\n");
++                    fprintf(stderr, "NETLINK: Received corrupt RTA_PRIORITY payload.\n");
+                     return NULL;
+                 }
+ 
