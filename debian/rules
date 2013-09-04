@@ -1,7 +1,8 @@
 #!/usr/bin/make -f
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/class/autotools.mk
 
-install/ifmetric::
-	install -p -m 0755 debian/ifmetric.ifup \
-		$(DEB_DESTDIR)/etc/network/if-up.d/ifmetric
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+%:
+	dh $@
+

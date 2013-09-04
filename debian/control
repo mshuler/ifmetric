@@ -1,9 +1,12 @@
 Source: ifmetric
 Section: net
 Priority: extra
-Maintainer: Chris Hanson <cph@debian.org>
-Build-Depends: cdbs, debhelper (>= 4.1.0), lynx
-Standards-Version: 3.6.2
+Maintainer: Michael Shuler <michael@pbandjelly.org>
+Build-Depends: debhelper (>= 8), lynx
+Standards-Version: 3.9.4
+Homepage: http://0pointer.de/lennart/projects/ifmetric/
+Vcs-Git: git://anonscm.debian.org/collab-maint/ifmetric.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/ifmetric.git
 
 Package: ifmetric
 Architecture: any
