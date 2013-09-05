@@ -1,3 +1,5 @@
+Correct spelling-error-in-binary
+Author: Michael Shuler <michael@pbandjelly.org>
 Index: ifmetric/src/ifmetric.c
 ===================================================================
 --- ifmetric.orig/src/ifmetric.c	2013-09-04 18:37:59.000000000 -0500
