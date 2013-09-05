@@ -5,13 +5,14 @@ ifmetric (0.3-3) UNRELEASED; urgency=low
   * Update to compat 9 for hardening build flags.
   * Remove empty debian/{pre,post}{inst,rm} files.
   * Add debian/source/format - 3.0 (quilt).
-  * Add Vcs-* fields to debian/control.
+  * Add Vcs-* and Homepage fields to debian/control.
   * Switch debian/copyright license reference from GPL symlink to GPL-2.
   * Move debian/ifmetric.ifup to debian/ifmetric.if-up.
   * Add debian/watch file.
   * Switch from cdbs to dh.
   * Add debian/source/{options,patch-header} for git packaging.
   * Patch src/ifmetric.c for s/Recieved/Received/ typo.
+  * Add debian/upstream_changelog from homepage News section.
 
     TODO:
   * Add patch to fix NETLINK: Packet too small or truncated!
