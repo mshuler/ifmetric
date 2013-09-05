@@ -15,7 +15,7 @@ ifmetric (0.3-3) unstable; urgency=low
   * Patch src/ifmetric.c for s/Recieved/Received/ typo.
   * Add debian/upstream_changelog from homepage News section.
   * Add patch to fix "NETLINK: Packet too small or truncated!" error.
-    Closes: #514197, LP: #896584
+    Thanks to Benedek László for the patch.  Closes: #514197, LP: #896584
 
  -- Michael Shuler <michael@pbandjelly.org>  Thu, 05 Sep 2013 14:53:17 -0500
 
