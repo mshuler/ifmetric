@@ -1,16 +1,8 @@
-Subject: Collected Debian patches for ifmetric
-Author: Michael Shuler <michael@pbandjelly.org>
-
-The ifmetric package is maintained in Git rather than maintaining
-patches as separate files, and separating the patches doesn't seem to
-be worth the effort.  They are therefore all included in this single
-Debian patch.
-
-For full commit history and separated commits, see the packaging Git
-repository.
---- ifmetric-0.3.orig/src/ifmetric.c
-+++ ifmetric-0.3/src/ifmetric.c
-@@ -38,7 +38,7 @@ int enumerate_callback(struct nlmsghdr *
+Index: ifmetric/src/ifmetric.c
+===================================================================
+--- ifmetric.orig/src/ifmetric.c	2013-09-04 18:37:59.000000000 -0500
++++ ifmetric/src/ifmetric.c	2013-09-04 19:08:38.539750778 -0500
+@@ -38,7 +38,7 @@
              case RTA_OIF:
  
                  if (RTA_PAYLOAD(a) != sizeof(int)) {
@@ -19,7 +11,7 @@ repository.
                      return -1;
                  }
                  
-@@ -102,7 +102,7 @@ struct nlmsghdr* set_route_metric(struct
+@@ -102,7 +102,7 @@
              case RTA_PRIORITY:
  
                  if (RTA_PAYLOAD(a) != sizeof(int)) {
