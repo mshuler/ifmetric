@@ -1,4 +1,4 @@
-Correct spelling-error-in-binary
+Description: Correct spelling-error-in-binary s/Recieved/Received/
 Author: Michael Shuler <michael@pbandjelly.org>
 Index: ifmetric/src/ifmetric.c
 ===================================================================
