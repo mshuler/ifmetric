@@ -11,7 +11,7 @@ ifmetric (0.3-3) unstable; urgency=low
   * Move debian/ifmetric.ifup to debian/ifmetric.if-up.
   * Add debian/watch file.
   * Switch from cdbs to dh.
-  * Add debian/source/{options,patch-header} for git packaging.
+  * Add debian/source/local-options to keep build source clean.
   * Patch src/ifmetric.c for s/Recieved/Received/ typo.
   * Add debian/upstream_changelog from homepage News section.
   * Add patch to fix "NETLINK: Packet too small or truncated!" error.
