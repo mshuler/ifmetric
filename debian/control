@@ -9,7 +9,7 @@ Vcs-Git: git://anonscm.debian.org/collab-maint/ifmetric.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/ifmetric.git
 
 Package: ifmetric
-Architecture: any
+Architecture: linux-any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Set routing metrics for a network interface
  ifmetric is a Linux tool for setting the metrics of all IPv4 routes
