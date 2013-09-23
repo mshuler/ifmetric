@@ -44,7 +44,7 @@ int netlink_request(int s, struct nlmsghdr *n, int (*callback) (struct nlmsghdr 
 
     for (;;) {
         int bytes;
-        char replybuf[2048];
+        char replybuf[4096];
         struct nlmsghdr *p = (struct nlmsghdr *) replybuf;
         
         if ((bytes = recv(s, &replybuf, sizeof(replybuf), 0)) < 0) {

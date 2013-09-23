@@ -1,3 +1,10 @@
+ifmetric (0.3-2+deb7u1) stable; urgency=low
+
+  * Add patch to fix "NETLINK: Packet too small or truncated!" error.
+    Thanks to Benedek László for the patch.  Closes: #514197, LP: #896584
+
+ -- Michael Shuler <michael@pbandjelly.org>  Mon, 23 Sep 2013 09:04:32 -0500
+
 ifmetric (0.3-2) unstable; urgency=low
 
   * debian/control: bump standards-version (no changes).
