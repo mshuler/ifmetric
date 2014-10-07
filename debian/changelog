@@ -1,8 +1,10 @@
 ifmetric (0.3-4) UNRELEASED; urgency=low
 
-  * Set Architecture: linux-any to exclude kfreebsd/hurd builds
+  * debian/control:
+    Set Architecture: linux-any to exclude kfreebsd/hurd builds.
+    Update to Standards-Version: 3.9.6 (no other changes needed).
 
- -- Michael Shuler <michael@pbandjelly.org>  Sun, 22 Sep 2013 21:31:30 -0500
+ -- Michael Shuler <michael@pbandjelly.org>  Mon, 06 Oct 2014 23:51:17 -0500
 
 ifmetric (0.3-3) unstable; urgency=low
 
