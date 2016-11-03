@@ -7,9 +7,11 @@ ifmetric (0.3-4) UNRELEASED; urgency=low
   * debian/copyright:
     Drop recurrent license text for lintian.
   * debian/rules:
-    Add hardening build flag for all options
+    Add hardening build flag for all options.
+  * debian/patches/ifmetric.8_typo:
+    Fix typo in man page.
 
- -- Michael Shuler <michael@pbandjelly.org>  Wed, 02 Nov 2016 23:14:29 -0500
+ -- Michael Shuler <michael@pbandjelly.org>  Wed, 02 Nov 2016 23:25:56 -0500
 
 ifmetric (0.3-3) unstable; urgency=low
 
