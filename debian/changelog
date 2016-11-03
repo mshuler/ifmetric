@@ -6,8 +6,10 @@ ifmetric (0.3-4) UNRELEASED; urgency=low
     Update Vcs-Browser/Vcs-Git: https URLs.
   * debian/copyright:
     Drop recurrent license text for lintian.
+  * debian/rules:
+    Add hardening build flag for all options
 
- -- Michael Shuler <michael@pbandjelly.org>  Wed, 17 Aug 2016 18:50:17 -0500
+ -- Michael Shuler <michael@pbandjelly.org>  Wed, 02 Nov 2016 23:14:29 -0500
 
 ifmetric (0.3-3) unstable; urgency=low
 
