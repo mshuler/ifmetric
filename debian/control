@@ -2,7 +2,7 @@ Source: ifmetric
 Section: net
 Priority: extra
 Maintainer: Michael Shuler <michael@pbandjelly.org>
-Build-Depends: debhelper (>= 9), lynx
+Build-Depends: debhelper (>= 10), lynx
 Standards-Version: 3.9.8
 Homepage: http://0pointer.de/lennart/projects/ifmetric/
 Vcs-Git: https://anonscm.debian.org/git/collab-maint/ifmetric.git

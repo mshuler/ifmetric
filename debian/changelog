@@ -1,3 +1,10 @@
+ifmetric (0.3-5) UNRELEASED; urgency=medium
+
+  * debian/{compat,control}:
+    Update to compat level 10 and debhelper (>= 10)
+
+ -- Michael Shuler <michael@pbandjelly.org>  Fri, 04 Nov 2016 17:44:45 -0500
+
 ifmetric (0.3-4) unstable; urgency=low
 
   * debian/control:
