@@ -3,7 +3,7 @@ Section: net
 Priority: extra
 Maintainer: Michael Shuler <michael@pbandjelly.org>
 Build-Depends: debhelper (>= 10), lynx
-Standards-Version: 3.9.8
+Standards-Version: 4.0.0
 Homepage: http://0pointer.de/lennart/projects/ifmetric/
 Vcs-Git: https://anonscm.debian.org/git/collab-maint/ifmetric.git
 Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/ifmetric.git
