@@ -3,6 +3,8 @@ ifmetric (0.3-5) UNRELEASED; urgency=medium
   * debian/{compat,control}:
     Update to compat level 10 and debhelper (>= 10)
     Update to standards version 4.0.0
+  * Fix "NETLINK: Error: Invalid argument" for links that are down in kernel
+    4.4+. Thanks for the patch, Jim Paris. Closes: #864889
 
  -- Michael Shuler <michael@pbandjelly.org>  Thu, 20 Jul 2017 23:36:25 -0500
 

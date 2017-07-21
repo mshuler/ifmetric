@@ -97,6 +97,8 @@ struct nlmsghdr* set_route_metric(struct nlmsghdr* n, int metric) {
     l = NLMSG_PAYLOAD(n, sizeof(struct rtmsg));
     a = RTM_RTA(r);
     
+    r->rtm_flags &= ~(RTNH_F_DEAD | RTNH_F_LINKDOWN);
+
     while(RTA_OK(a, l)) {
         switch(a->rta_type) {
             case RTA_PRIORITY:
